@@ -2,6 +2,8 @@
 This task is aimed to perform a duplicate detection for a bulk of images. 
 
 Data_cleaner.ipynb:
+
+
 For this task two datasets were provided 1) 5Gb dump 2)small 1.3Gb dump. Because of lim-
 ited resources small dump was chosen for processing as big dump was simply not loading in
 the system. As every product had 4 urls, only the 200x200 resolution was chosen for the pro-
