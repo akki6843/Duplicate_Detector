@@ -32,3 +32,11 @@ downloader.ipynb:
 
 As the name suggest this script downloads the images. For further simplicity and data track-
 ing all images were downloaded and renamed with there respective product id example: .
+
+duplicate_detection_processor.ipynb:
+
+In this file all the images that are downloaded are processed. Idea is to extract features using
+pre-trained model. For this task VGG16 model is used trained on imagenet dataset. In this
+file every image is passed through the network and features are extracted from ‘fc2’ layer.
+Each feature is of size [1,4096]. So each image is now represented as a feature vector. This
+feature vectors are then stored in a pickle file for later use.
