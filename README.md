@@ -13,3 +13,16 @@ clear that description can lead to lot of false positive as a result ‘descript
 droped. Then title coloum was targeted which drastically helped it shortlisting the required
 data. This required data was further filtered based on urls then productId. This filtering
 helped the to shortlist the images from lakhs of images to only thousands.
+
+
+Method.ipynb
+
+The file discuss the different methods that can be used to solve the task. It starts from sub-
+tracting two images and calculating the pixel value difference. As this can be t he quick way
+to check the similarity but, it can be very catostrophic as illumination and pose difference
+can cause alot of noise. Therefore, moving towards a approach that can help us to take care
+of data with its noise. So images were compared for there mse values. For this initial val-
+ues for similar images were great but as image move away from similarity it gets dificult
+to pin-point a threshold values for making the decision of similarity. Hence the method
+of deeplearning is chosen as it can takecare of illumination, rotation and little noise in the
+images. As a outcome deeplearning based feature extraction method is chosen for the task.
