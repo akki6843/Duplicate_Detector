@@ -60,6 +60,7 @@ power. Final results are stored in json file as a dictonary.
 ##############################################################################################
 
 6) Duplicate_checker.ipynb:
+
 Here the design is made to process in a fashion of checking whether two image are duplicate
 or not. Also here one more case is added where it takes one image as input and check all the
 duplicates in the preprocessed vectors.
