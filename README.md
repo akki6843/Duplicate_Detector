@@ -26,3 +26,9 @@ ues for similar images were great but as image move away from similarity it gets
 to pin-point a threshold values for making the decision of similarity. Hence the method
 of deeplearning is chosen as it can takecare of illumination, rotation and little noise in the
 images. As a outcome deeplearning based feature extraction method is chosen for the task.
+
+
+downloader.ipynb:
+
+As the name suggest this script downloads the images. For further simplicity and data track-
+ing all images were downloaded and renamed with there respective product id example: .
