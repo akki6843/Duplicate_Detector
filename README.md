@@ -1,7 +1,7 @@
 # Duplicate_Detector
 This task is aimed to perform a duplicate detection for a bulk of images. 
 
-###############################################################################################################
+######################################################################################
 
 1) Data_cleaner.ipynb:
 
@@ -15,7 +15,7 @@ droped. Then title coloum was targeted which drastically helped it shortlisting 
 data. This required data was further filtered based on urls then productId. This filtering
 helped the to shortlist the images from lakhs of images to only thousands.
 
-###############################################################################################################
+########################################################################################
 
 2) Method.ipynb
 
@@ -29,14 +29,16 @@ to pin-point a threshold values for making the decision of similarity. Hence the
 of deeplearning is chosen as it can takecare of illumination, rotation and little noise in the
 images. As a outcome deeplearning based feature extraction method is chosen for the task.
 
-#####################################################################################################################
+###########################################################################################
 
 3) Downloader.ipynb:
 
 As the name suggest this script downloads the images. For further simplicity and data track-
 ing all images were downloaded and renamed with there respective product id example: .
 
-duplicate_detection_processor.ipynb:
+##########################################################################################
+
+4) Duplicate_detection_processor.ipynb:
 
 In this file all the images that are downloaded are processed. Idea is to extract features using
 pre-trained model. For this task VGG16 model is used trained on imagenet dataset. In this
@@ -44,3 +46,20 @@ file every image is passed through the network and features are extracted from â
 Each feature is of size [1,4096]. So each image is now represented as a feature vector. This
 feature vectors are then stored in a pickle file for later use.
 
+############################################################################################
+
+5) Duplicate_finder.ipynb:
+
+Now that we have all the feature vectors for the images here, we calculate the features of
+all the query images and calculate the euclidean distance between query image feature vec-
+tor against precomputed feature vectors. And based on distance value we decide whether
+image have a duplicate or not, if so the list of duplicates is prepared and then dumped in a
+dictonary. The list of query images was taken to be 100 images because of limited processing
+power. Final results are stored in json file as a dictonary.
+
+##############################################################################################
+
+6) Duplicate_checker.ipynb:
+Here the design is made to process in a fashion of checking whether two image are duplicate
+or not. Also here one more case is added where it takes one image as input and check all the
+duplicates in the preprocessed vectors.
